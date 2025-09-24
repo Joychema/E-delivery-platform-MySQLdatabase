@@ -17,18 +17,21 @@ The database is named `deliverDB` and consists of the following tables, designed
 `OrderItems`: This is a linking table that resolves the many-to-many relationship between Orders and Products.
 
 ## API Endpoints
-The API is built using `FastAPI` and `SQLAlchemy` to perform CRUD (Create, Read, Update, Delete) operations on the database tables.
+The API is built to perform the four core CRUD operations on your data. Here’s a breakdown of what each endpoint does:
 
-The following endpoints are available for the Customers entity:
+`POST /customers/`: Creates a new customer. You send the customer’s details, and the API adds them to the database.
 
-HTTP Method	 |     Endpoint	       |        Description
-POST	          /customers/	                Creates a new customer record.
-GET       	   /customers/	                Retrieves a list of all customers.
-GET	          /customers/{customer_id}	    Retrieves details for a single customer by ID.
-PUT	         /customers/{customer_id}	      Updates an existing customer's details.
-DELETE	    /customers/{customer_id}	      Deletes a customer record.
+`GET /customers/`: Retrieves a list of all customers from the database.
 
-📌Note: Endpoints for the Products entity would follow the same pattern.
+`GET /customers/{customer_id}`: Reads the details of a single customer by using their unique ID.
+
+`PUT /customers/{customer_id}`: Updates an existing customer’s information. You provide the customer's ID and the new details to modify their record.
+
+`DELETE /customers/{customer_id}`: Deletes a customer record permanently from the database using their ID.
+
+
+📌 Note: Endpoints for the Products entity would follow the same pattern.
+
 
 ### Prerequisites
 To run this project, you will need:
@@ -56,18 +59,20 @@ To run this project, you will need:
 
 → Install the required Python packages:
 
-Bash
+##### Bash
 
 `pip install -r requirements.txt`
+
 ▶ Open `database.py` and update the `DATABASE_URL` with your specific MySQL credentials.
 
 Run the Application:
 
 ▶ Start the FastAPI server from the terminal.
 
-Bash
+##### Bash
 
 `uvicorn main:app --reload`
+
 ✔ The --reload flag will automatically restart the server whenever you make changes to the code.
 
 ## API Documentation
