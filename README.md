@@ -1,4 +1,4 @@
-### E-Commerce E-Delivery Platform
+# E-Commerce E-Delivery Platform
 This project is a full-stack solution for an e-commerce platform with a delivery service. It consists of a relational database for data storage and a RESTful API built with FastAPI and Python for managing that data.
 
 ## Database Schema
@@ -30,7 +30,7 @@ DELETE	    /customers/{customer_id}	      Deletes a customer record.
 
 📌Note: Endpoints for the Products entity would follow the same pattern.
 
-# Prerequisites
+### Prerequisites
 To run this project, you will need:
 
 ● Python 3.7+
@@ -40,9 +40,9 @@ To run this project, you will need:
 ● The project files from this repository
 
 ## Setup and Usage
-Follow these steps to set up and run the entire project.
+#### Follow these steps to set up and run the entire project.
 
-# Database Setup:
+### Database Setup:
 
 → Ensure your MySQL server is running.
 
@@ -50,7 +50,7 @@ Follow these steps to set up and run the entire project.
 
 → Optionally, execute the `dummy_data.sql` file to populate the tables with sample data.
 
-# API Setup:
+### API Setup:
 
 → Navigate to the project's root directory in your terminal (the folder containing main.py).
 
